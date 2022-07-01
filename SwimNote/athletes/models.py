@@ -22,4 +22,10 @@ class Athlete(models.Model):
     style = models.CharField(max_length=16,
                              choices = StyleField.choices,
                              default = StyleField.FREESTYLE)
+class PersonalBest(models.Model):
+    style = models.CharField(max_length=16,
+                             choices=StyleField.choices,
+                             default=StyleField.FREESTYLE)
+    time = models.DurationField()
+    distance = models.PositiveIntegerField()
 
