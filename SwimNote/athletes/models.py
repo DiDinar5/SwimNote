@@ -27,7 +27,8 @@ class Athlete(models.Model):
         on_delete=models.CASCADE,
         null = True
     )
-
+    def __str__(self):
+            return self.name
 class PersonalBest(models.Model):
     style = models.CharField(max_length=16,
                              choices=StyleField.choices,
