@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SwimNote</title>
+</head>
+<body>
+{% if athletes %}
+    <ul>
+    {% for a in athletes %}
+       <a href="/athletes/{{ a.id }}/"> <li>{{ a.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Спортсменов нет :(</p>
+{% endif %}
+</body>
+</html>
